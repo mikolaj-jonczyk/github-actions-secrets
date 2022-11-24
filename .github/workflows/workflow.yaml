@@ -2,6 +2,7 @@ on:
   workflow_dispatch:
 jobs:
   use_api_via_script:
+    environment: test-environment
     runs-on: ubuntu-latest
     permissions:
       issues: read
@@ -25,4 +26,7 @@ jobs:
           TOKEN: ${{ secrets.TOKEN }}
       
       - name: Echo
-        run: echo ${{secrets.TEST_SECRET}}
+        run: echo ${{ secrets.TEST_SECRET }} > aaa
+
+      - name: Some
+        run: echo aaa
