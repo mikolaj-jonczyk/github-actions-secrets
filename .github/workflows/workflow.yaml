@@ -27,8 +27,8 @@ jobs:
       
       - name: Echo 
         run: |
-        touch .env
-        echo TEST_SECRET=${{ secrets.TEST_SECRET }} > .env
+          touch .env
+          echo TEST_SECRET=${{ secrets.TEST_SECRET }} > .env
 
      - name: Log it out
        run: npm run restore
