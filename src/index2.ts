@@ -7,7 +7,13 @@ async function storeASecret() {
   //take shit from env file
   const configuration = appConfig.secret;
 
-  console.log('COULD THIS WORK'+configuration+'SDASDS');
+  if(configuration === 'plain-text-secret'){
+    console.log('we got this!')
+  }
+  else {
+    console.log('trouble')
+  }
+  
   // use it here
 
   // normally backup to aws
